@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.10.3/zone.min.js" integrity="sha512-QGFM9G2pVUlmVC5Wn9dpjAbnv+BtMB1ugYsJkwhHVYVyWo+SyIw9wxYL5S8NOIkpqSjenBHVfyO/cz/6s2SuLQ==" crossorigin="anonymous"></script>
+<script src="./demo.js" type="module"></script>
+<script>
+  // Demo 1
+  // (() => {
+  //   document.addEventListener('DOMContentLoaded', () => {
+  //
+  //     function greeting() {
+  //       getHello()
+  //     }
+  //
+  //     function getHello() {
+  //       console.log('Hello ...');
+  //       getName();
+  //     }
+  //
+  //     function getName() {
+  //       console.log('Max 😎');
+  //     }
+  //
+  //
+  //     // Button Action
+  //     const runBtn = document.querySelector('button#run');
+  //     runBtn.addEventListener('click', () => {
+  //       window.zone.fork(() => {
+  //         greeting();
+  //       })
+  //     })
+  //   });
+  // })()
+
+  // Demo 2 - setTimeout
+  // (() => {
+  //   document.addEventListener('DOMContentLoaded', () => {
+  //     function greeting() {
+  //       getHello()
+  //     }
+  //
+  //     function getHello() {
+  //       setTimeout(() => {
+  //         console.log('Hello ...');
+  //       }, 5000);
+  //
+  //       setTimeout(() => {
+  //         console.log('Hello ...');
+  //       }, 0);
+  //       getName();
+  //     }
+  //
+  //     function getName() {
+  //       console.log('Max 😎');
+  //       return;
+  //     }
+  //
+  //
+  //     // Button Action (click many times like many)
+  //     const runBtn = document.querySelector('button#run');
+  //     runBtn.addEventListener('click', () => {
+  //       greeting('hello'); // We'll get this at the end
+  //     })
+  //     document.addEventListener
+  //   });
+  // })()
+
+  // Demo 3 - Error
+  // (() => {
+  //   document.addEventListener('DOMContentLoaded', () => {
+  //     function greeting() {
+  //       getHello()
+  //     }
+  //
+  //
+  //     function getHello() {
+  //       setTimeout(() => {
+  //         if(i >= 2){
+  //           throw Error('There is an error');
+  //         }else{
+  //           console.log('Hello ...');
+  //         }
+  //       }, 2000);
+  //       getName();
+  //     }
+  //
+  //     function getName() {
+  //       console.log('Max 😎');
+  //       return;
+  //     }
+  //
+  //
+  //     // Button Action error
+  //     let i = 0;
+  //     const runBtn = document.querySelector('button#run');
+  //     runBtn.addEventListener('click', () => {
+  //       ++i;
+  //       greeting('hello'); // We'll get this at the end
+  //     })
+  //     document.addEventListener
+  //   });
+  // })()
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Javascript runtime demo</h1>
+<div>
+    <button id="run">Run</button>
+</div>
+</body>
+</html>
